@@ -5,9 +5,7 @@ import logoImg from '../logo.png'
 
 export default withSiteData(() => (
   <div>
-    <h1 style={{ textAlign: 'center' }}>Welcome to</h1>
+    <h1 style={{ textAlign: 'center' }}>react-redux-solidity</h1>
     <img src={logoImg} alt="" />
-    <br />
-    <p>This is a demo of a Cordova application built with React Static!</p>
   </div>
 ))
