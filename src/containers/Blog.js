@@ -1,7 +1,9 @@
 
 import React from 'react'
 import { withRouteData, Link } from 'react-static'
-//
+import Web3 from '../../node_modules/web3'
+
+var balance = web3.eth.getBalance( )
 
 export default withRouteData(({ posts }) => (
   <div>
