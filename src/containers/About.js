@@ -1,7 +1,7 @@
 
 import React from 'react'
 import { connect } from 'react-redux'
-//
+
 
 // /////////////////////////////////////////////////////////
 // Redux components
@@ -22,6 +22,9 @@ const CounterConnected = connect(
     reset: () => dispatch({ type: 'RESET' }),
   }),
 )(Counter)
+
+
+
 
 // /////////////////////////////////////////////////////////
 // Actual container
