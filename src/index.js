@@ -5,7 +5,11 @@ import ReactDOM from 'react-dom'
 import App from './App'
 
 // Export your top level component as JSX (for static rendering)
-export default App
+//export default App
+export class App extends Component {
+  componentWillMount () {
+    this.props.web3Connect() // initiate web3 existence check. metamask compatibility
+}
 
 // Render your app
 if (typeof document !== 'undefined') {
@@ -16,4 +20,9 @@ if (typeof document !== 'undefined') {
 
   // Render!
   render(App)
+}
+
+App.propTypes = {
+  children: React.PropTypes.element.isRequired,
+  web3Connect: React.PropTypes.func.isRequired //make sure to add proptypes everyone!
 }
