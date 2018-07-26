@@ -4,10 +4,8 @@ import { Provider } from 'react-redux'
 import { hot } from 'react-hot-loader'
 import Routes from 'react-static-routes'
 import store from './connectors/redux'
-import Web3 from '../node_modules/web3'
+import Web3 from 'web3'
 import './app.css'
-
-var web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
 
 
 const App = () => (

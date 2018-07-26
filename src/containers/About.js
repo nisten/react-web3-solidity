@@ -1,7 +1,7 @@
 
 import React from 'react'
 import { connect } from 'react-redux'
-//
+
 
 // /////////////////////////////////////////////////////////
 // Redux components
@@ -23,26 +23,8 @@ const CounterConnected = connect(
   }),
 )(Counter)
 
-const web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
-const abi = [{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"payable":false,"type":"function"},{"payable":false,"type":"fallback"}];
-const address = "0x3E2A850420e024d2f269d45F85a24Dc6F586277D";
-const deployedContract = web3.eth.contract(abi).at(address);
-const filter = web3.eth.filter('latest');
 
-class App extends Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      blockNumber: web3.eth.blockNumber,
-      ...deployedContract
-    }
-  }
-  componentDidMount(){
-    filter.watch((error, result) =>{
-      const block = web3.eth.getBlock(result, true);
-      this.setState({blockNumber: block.number});
-    });
-  }
+
 
 // /////////////////////////////////////////////////////////
 // Actual container

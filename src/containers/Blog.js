@@ -1,7 +1,6 @@
 
 import React from 'react'
 import { withRouteData, Link } from 'react-static'
-import Web3 from '../../node_modules/web3'
 
 
 export default withRouteData(({ posts }) => (
