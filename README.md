@@ -2,7 +2,7 @@
 
 To start the project, make sure you have docker installed and run `docker-compose up`.
 On another terminal run `yarn add react-static && yarn start` to start the local webserver.
-To debug web3 and check output run `yarn start --debug' otherwise any `console.log` in the code
+To debug web3 and check output run `yarn start --debug` otherwise any `console.log` in the code
 will be filtered out once the app is compiled.
 
 If you're running docker on mac, depending on your version of Docker you may need to factory reset
