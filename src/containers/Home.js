@@ -1,15 +1,12 @@
 import React from 'react'
 import { withSiteData } from 'react-static'
 import logoImg from '../logo.png'
-import web3 from 'web3'
+import Web3 from 'web3'
 
 const web3 = new Web3(Web3.givenProvider || "http://localhost:8545");
 
-componentDidMount = () => {
 console.log(Web3.version);
 web3.eth.getBlock(3150).then(console.log);
-}
-
 
 
 export default withSiteData(() => (
